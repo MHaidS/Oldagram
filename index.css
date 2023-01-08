@@ -1,0 +1,32 @@
+/*  IN PROGRESS  */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+.user-avatar {
+  width: 32px;
+}
+
+/* .header {
+  display: flex;
+} */
+
+.post .header {
+  display: flex;
+  justify-content: start;
+}
+
+.post .avatar {
+  width: 32px;
+}
+
+.post .img {
+  width: 100%;
+}

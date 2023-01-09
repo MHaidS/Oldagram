@@ -6,43 +6,71 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oldagram</title>
+        <title>IN PROGRESS - Oldagram</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+        <!-- CDN FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div>
-            <img class="logo" src="images/logo.png">
-            <img class="user-avatar" src="images/user-avatar.jpeg">
-        </div>
-        <div class="post">
-            <div class="header">
-                <img class="avatar" src="images/avatar-vangogh.jpg">
+        <header>    
+            <div class="container">    
+                <div class="image-container">
+                    <img 
+                        class="oldagram-logo" src="images/logo.png" alt="platform logo" 
+                    />
+                    <img 
+                        class="round-img user-avatar" 
+                        src="images/user-avatar.jpeg" 
+                        alt="user portrait" 
+                    />
+                </div> <!-- "image-container" -->
+            </div> <!-- "container" -->
+        </header>
+<!-- ************************ -->
+        <section>
+            <div class="container">
+                <div class="username">
+                    <img class="round-img" src="${post.avatar}" alt="Vangogh's avatar">
+                    <div class="username-text">
+                        <h3 class="bold-text">${post.name}</h3>
+                        <p>${post.location}</p>
+                    </div> <!-- "username-text" -->
+                </div> <!-- "username" -->
+<!-- ************************ -->
                 <div>
-                    <div><span class="name">Vincent van Gogh</span></div>
-                    <span class="location">Zundert, Netherlands</span>
+                    <img 
+                        class="timeline-post" 
+                        id="img-post"
+                        data-double-like="${post.uuid}" 
+                        src="${post.post}" alt="Vangogh's portrait" 
+                    />
                 </div>
-            </div>
+<!-- ************************ -->
+                <div class="section-likes">
+                    <i class="fa-solid fa-heart icon icon-like ${likeIcon}" id="likes" data-like="${post.uuid}"></i>
+                    <i class="fa-regular fa-comment icon"></i>
+                    <i class="fa-regular fa-paper-plane icon"></i>
 
-            <div>
-                <img class="img" src="images/post-vangogh.jpg">
-            </div>
+                    <p id="likes" class="bold-text" id="likes.el">${post.likes} likes</p>
 
-            <div>
-                <div>
-                    <img class="icon" src="images/icon-heart.png">
-                    <img class="icon" src="images/icon-comment.png">
-                    <img class="icon" src="images/icon-dm.png">
-                </div>
-                <p>21,492 likes</p>
-                <div>
-                    <span class="username">vincey1853</span>
-                    <span class="comment"> just took a few mushrooms lol</span>
-                </div>
-            </div>
-        </div>
+                    <p><span class="bold-text">${post.username}</span>${post.comment}</p>
+                </div> <!-- "section-likes" -->
+            </div> <!-- "container" ===> transfer to js file -->
+        </section>
+<!-- ************************ -->
         <script src="index.js"></script>
     </body>
 </html>
+
+
+
+

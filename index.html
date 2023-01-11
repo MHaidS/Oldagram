@@ -1,4 +1,3 @@
-<!-- IN PROGRESS -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,71 +5,46 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IN PROGRESS - Oldagram</title>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>IN PROGRESS - Oldagram
+            ( an Instagram clone in which html, css & js were used; posts can be liked once by clicking the heart icon or by double-clicking the post itself, doing it again will decrease the number of likes )
+        </title>
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-        <!-- CDN FONT AWESOME -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <!-- CSS DOCUMENT -->
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <header>    
-            <div class="container">    
-                <div class="image-container">
-                    <img 
-                        class="oldagram-logo" src="images/logo.png" alt="platform logo" 
-                    />
-                    <img 
-                        class="round-img user-avatar" 
-                        src="images/user-avatar.jpeg" 
-                        alt="user portrait" 
-                    />
-                </div> <!-- "image-container" -->
-            </div> <!-- "container" -->
+        <header class="header-container">
+          <img 
+            src="images/logo.png" 
+            alt="oldagram logo" 
+            class="logo" 
+          />
+          <img 
+            src="images/user-avatar.jpeg" alt="user avatar" 
+            class="avatar" 
+          />
         </header>
-<!-- ************************ -->
-        <section>
-            <div class="container">
-                <div class="username">
-                    <img class="round-img" src="${post.avatar}" alt="Vangogh's avatar">
-                    <div class="username-text">
-                        <h3 class="bold-text">${post.name}</h3>
-                        <p>${post.location}</p>
-                    </div> <!-- "username-text" -->
-                </div> <!-- "username" -->
-<!-- ************************ -->
-                <div>
-                    <img 
-                        class="timeline-post" 
-                        id="img-post"
-                        data-double-like="${post.uuid}" 
-                        src="${post.post}" alt="Vangogh's portrait" 
-                    />
-                </div>
-<!-- ************************ -->
-                <div class="section-likes">
-                    <i class="fa-solid fa-heart icon icon-like ${likeIcon}" id="likes" data-like="${post.uuid}"></i>
-                    <i class="fa-regular fa-comment icon"></i>
-                    <i class="fa-regular fa-paper-plane icon"></i>
-
-                    <p id="likes" class="bold-text" id="likes.el">${post.likes} likes</p>
-
-                    <p><span class="bold-text">${post.username}</span>${post.comment}</p>
-                </div> <!-- "section-likes" -->
-            </div> <!-- "container" ===> transfer to js file -->
-        </section>
-<!-- ************************ -->
+    
+        <main id="main-container" class="main-container">  
+        </main>
+    
         <script src="index.js"></script>
     </body>
 </html>
+<!-- *************************************** -->
+<!-- REQUIREMENTS:
+== Create the 1st post
+== Use semantic HTML
+== Add hover effects to the icons
+-->
 
-
-
-
+<!-- STRETCH GOALS:
+== Use JS to render out all 3 posts
+== Increase the likes when double clicking the post
+== Only allows to like a post 1x; if a liked post is clicked once more, it will decrease the number of likes by 1
+== Heart icon will change in color if a post is liked & if you hover over it (same goes w/ the comment & dm icons)
+-->
